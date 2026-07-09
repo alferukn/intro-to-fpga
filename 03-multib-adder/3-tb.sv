@@ -37,13 +37,13 @@ module tb;
 
 
                         assert (res_or_sch === orExp[i]) 
-                                else $error("Or-p failed at A=%b, B=%b", a, b);
+                                else $error("Or-s failed at A=%b, B=%b", a, b);
 
                         assert (res_and_sch=== andExp[i]) 
-                                else $error("And-p failed at A=%b, B=%b", a, b);
+                                else $error("And-s failed at A=%b, B=%b", a, b);
 
                         assert (res_impl_sch === implExp[i]) 
-                                else $error("Impl-p failed at A=%b, B=%b", a, b);
+                                else $error("Impl-s failed at A=%b, B=%b", a, b);
                 end
                 $display("All tests were run");
         end
