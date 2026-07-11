@@ -1,0 +1,24 @@
+[tasks]
+task_bmc
+
+[options]
+task_bmc: mode bmc
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv 3-pirs.sv
+read -sv 4-schaef.sv
+read -sv 1-pirs.sv
+read -sv 2-scheaf.sv
+read -sv 4-compare.sv
+prep -top compare
+
+[files]
+4-compare.sv
+1-pirs.sv
+2-scheaf.sv
+../02-comb-circuits/3-pirs.sv
+../02-comb-circuits/4-schaef.sv
